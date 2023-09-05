@@ -5,17 +5,15 @@ import viteLogo from '/vite.svg';
 import './App.css';
 
 function App() {
-  const [color, setColor] = useState("")
-  console.log("color", color)
 
-  useEffect(() => {
-    setColor(document.body.style.backgroundColor)
-    console.log(color)
-  }, [color] )
 
   return (
+    <div>
+
     <div className='neumorphism-card'>
       <h1>Neumorphism</h1>
+    </div>
+    <button onClick={(e) => {console.log(window.getComputedStyle(e.target, null).getPropertyValue("background-color"))}}>print color</button>
     </div>
   );
 }
