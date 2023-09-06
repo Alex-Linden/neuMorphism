@@ -10,10 +10,10 @@ function App() {
     <div>
       <Card />
 
-      <div className='neumorphism-card'>
+      {/* <div className='neumorphism-card'>
         <h1>Neumorphism</h1>
       </div>
-      <button onClick={(e) => { console.log(window.getComputedStyle(e.target, null).getPropertyValue("background-color")); }}>print color</button>
+      <button onClick={(e) => { console.log(window.getComputedStyle(e.target, null).getPropertyValue("background-color")); }}>print color</button> */}
     </div>
   );
 }
