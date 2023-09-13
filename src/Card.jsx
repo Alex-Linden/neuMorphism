@@ -20,8 +20,8 @@ export default function Card({ bgColor = startingHexColor(), media = octopus, te
         flexDirection: "column",
         borderRadius: "50px",
         background: backgroundColor,
-        boxShadow: `18px 18px 36px ${shadows.darkShadow},
-                 -18px -18px 36px ${shadows.lightShadow}`
+        boxShadow: `20px 20px 40px ${shadows.darkShadow},
+                 -20px -20px 40px ${shadows.lightShadow}`
 
     };
     let mediaStyle = {
@@ -33,7 +33,9 @@ export default function Card({ bgColor = startingHexColor(), media = octopus, te
     }
 
     let textStyle = {
-        padding: "auto"
+        paddingRight: "1rem",
+        paddingLeft: "1rem"
+
     }
 
     return (
