@@ -14,16 +14,32 @@ export default function Card({ bgColor = startingHexColor(), media = octopus, te
     }, [backgroundColor]);
 
     let style = {
+        maxWidth: "30%",
+        display: "flex",
+        overflow: "hidden",
+        flexDirection: "column",
         borderRadius: "50px",
         background: backgroundColor,
         boxShadow: `18px 18px 36px ${shadows.darkShadow},
                  -18px -18px 36px ${shadows.lightShadow}`
+
     };
+    let mediaStyle = {
+        borderRadius: "50px",
+        padding: "1rem",
+        paddingBottom: "0.2rem",
+        // maxWidth: "100px"
+        maxHeight: "33.33%"
+    }
+
+    let textStyle = {
+        padding: "auto"
+    }
 
     return (
         <div style={style}>
-            <img src={media}></img>
-            <p>{text}</p>
+            <img style={mediaStyle} src={media}></img>
+            <p style={textStyle}>{text}</p>
         </div>
     );
 }
