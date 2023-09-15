@@ -26,11 +26,6 @@ export default function Card({ bgColor = startingHexColor(), media = octopus, te
 
     };
 
-    // let style = `border-radius: 50px;
-    // background: ${backgroundColor};
-    // box-shadow:  20px 20px 40px ${shadows.darkShadow},
-    //              -20px -20px 20px ${shadows.lightShadow};`;
-
     let mediaStyle = {
         borderRadius: "50px",
         padding: "1rem",
