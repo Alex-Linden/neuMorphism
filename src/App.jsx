@@ -8,6 +8,7 @@ function App() {
 
   return (
     <div>
+      <Card media={null} />
       <Card />
 
       {/* <div className='neumorphism-card'>

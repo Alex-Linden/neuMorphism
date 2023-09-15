@@ -14,6 +14,7 @@ export default function Card({ bgColor = startingHexColor(), media = octopus, te
     }, [backgroundColor]);
 
     let style = {
+        margin: "2rem",
         maxWidth: "30%",
         display: "flex",
         overflow: "hidden",
@@ -24,24 +25,36 @@ export default function Card({ bgColor = startingHexColor(), media = octopus, te
                  -20px -20px 40px ${shadows.lightShadow}`
 
     };
+
+    // let style = `border-radius: 50px;
+    // background: ${backgroundColor};
+    // box-shadow:  20px 20px 40px ${shadows.darkShadow},
+    //              -20px -20px 20px ${shadows.lightShadow};`;
+
     let mediaStyle = {
         borderRadius: "50px",
         padding: "1rem",
         paddingBottom: "0.2rem",
         // maxWidth: "100px"
         maxHeight: "33.33%"
-    }
+    };
 
     let textStyle = {
         paddingRight: "1rem",
         paddingLeft: "1rem"
-
+    };
+    if (media) {
+        return (
+            <div style={style}>
+                <img style={mediaStyle} src={media}></img>
+                <p style={textStyle}>{text}</p>
+            </div>
+        );
+    } else {
+        return (
+            <div style={style}>
+                <p style={textStyle}>{text}</p>
+            </div>
+        );
     }
-
-    return (
-        <div style={style}>
-            <img style={mediaStyle} src={media}></img>
-            <p style={textStyle}>{text}</p>
-        </div>
-    );
 }
