@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import Card from './Card';
 import './App.css';
+import HOCCard from './HOCCard';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <div>
       <Card media={null} />
       <Card />
+      <HOCCard />
 
       {/* <div className='neumorphism-card'>
         <h1>Neumorphism</h1>
